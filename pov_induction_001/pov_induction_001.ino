@@ -44,13 +44,13 @@ void setup() {
 }
 void loop() {
 
-  if (stateDiv == 1 && micros() - timeOld > rotTime / Div * (numDiv)) {
-    stateDiv = 0;
-    Serial.println("stateDiv = 0;");
-  }
-  if (stateDiv == 0 && micros() - timeOld < rotTime / Div * (numDiv + 1)) {
-    stateDiv = 1;
-    Serial.println("stateDiv = 1;");
+//  if (stateDiv == 1 && micros() - timeOld > rotTime / Div * (numDiv)) {
+//    stateDiv = 0;
+////    Serial.println("stateDiv = 0;");
+//  }
+//  if (stateDiv == 0 && micros() - timeOld < rotTime / Div * (numDiv + 1)) {
+//    stateDiv = 1;
+//    Serial.println("stateDiv = 1;");
     strip.clear();
     if (2000 > millis() - opeTime) {
       color = strip.Color(5, 0, 0);
@@ -73,7 +73,7 @@ void loop() {
       }
     }
     strip.show();
-  }
+//  }
 }
 void RotCount() {
   timeNow = micros();
