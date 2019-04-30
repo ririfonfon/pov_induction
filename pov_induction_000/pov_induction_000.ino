@@ -13,7 +13,7 @@ void setup() {
  pinMode(13, OUTPUT);
  strip.begin(); // Initialize pins for output
  strip.show();
- attachInterrupt(digitalPinToInterrupt(7), RotCount, FALLING );
+ attachInterrupt(digitalPinToInterrupt(D2), RotCount, FALLING );
  opeTime = millis();
 }
 void loop() {
